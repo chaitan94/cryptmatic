@@ -7,14 +7,11 @@
 	</ul>
 	<div id="account">
 		<?php
-		session_start();
-		if(isset($_SESSION['id'])){
+		if($this->session->userdata('email')){
 			//logged in
-			$this->load->database();
-			$tq = $this->db->query('SELECT level FROM users WHERE id='.$_SESSION['id'].' LIMIT 1');
-			$result = $tq->row_array();
-			$name = $result['name'];
-			$level = $result['level'];
+			$name = $this->session->userdata('name');
+			$level = $this->session->userdata('level');
+
 			echo '<ul>';
 			echo '<a href="/level/'.$level.'"><li>Level: '.$level.'</li></a>';
 			echo '<a href="/profile"><li>'.$name.'</li></a>';

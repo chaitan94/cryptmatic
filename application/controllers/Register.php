@@ -5,4 +5,10 @@ class Register extends CI_Controller {
 	{
 		$this->load->view('register');
 	}
+	public function newAcc()
+	{
+        $this->load->model('register_model');
+        $result = $this->register_model->validate();
+        echo $result;
+	}
 }

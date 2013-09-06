@@ -3,9 +3,7 @@
 class Logout extends CI_Controller {
 	public function index()
 	{
-		session_start();
-		if(isset($_SESSION['id']))
-			unset($_SESSION['id']);
+        $this->session->sess_destroy();
 		echo "Redirecting..<script type='text/javascript'>window.open('/','_self');</script>";
 	}
 }
