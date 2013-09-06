@@ -6,7 +6,7 @@ $route['rules'] = 'Rules';
 $route['level'] = 'Level';
 $route['aboutus'] = 'Aboutus';
 $route['register'] = 'Register';
-$route['profile'] = 'Profile';
+$route['profile'] = 'Home';
 $route['logout'] = 'Logout';
 
 $route['404_override'] = '';

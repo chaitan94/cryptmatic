@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Cryptmatic</title>
-	<link rel="stylesheet" href="assets/css/base.css">
-	<link rel="stylesheet" href="assets/css/register.css">
+	<link rel="stylesheet" href="/assets/css/base.css">
+	<link rel="stylesheet" href="/assets/css/register.css">
 </head>
 <body>
 <?php
@@ -15,7 +15,7 @@ if(isset($_SESSION['id'])){
 <script type="text/javascript">window.open('/','_self');</script>
 <?php
 }else{
-include 'assets/header.php'; ?>
+include '/assets/header.php'; ?>
 <div class="cont">
 <div class="sign">
 <table id="register" class="card">

@@ -13,6 +13,7 @@
 <ul>
 	<li>No capital letters in URLs</li>
 	<li>No spaces</li>
+	<li>Numbers should only be written in words</li>
 </ul>
 </div>
 </div>

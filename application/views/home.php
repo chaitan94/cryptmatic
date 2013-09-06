@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>Cryptmatic</title>
-	<link rel="stylesheet" href="assets/css/base.css">
+	<link rel="stylesheet" href="/assets/css/base.css">
 </head>
 <body>
-<?php include 'assets/header.php'; ?>
+<?php include '/assets/header.php'; ?>
 </body>
 </html>
