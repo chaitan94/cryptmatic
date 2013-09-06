@@ -12,10 +12,8 @@ class Level extends CI_Controller {
 		}
 
 		$level=0;
-		$this->load->database();
-		session_start();
-		if(isset($_SESSION['id'])){
-			$tq = $this->db->query('SELECT level FROM users WHERE id='.$_SESSION['id'].' LIMIT 1');
+		if($this->session->userdata['id']){
+			$tq = $this->db->query('SELECT level FROM users WHERE id=? LIMIT 1',array($this->session->userdata['id']));
 			$result = $tq->row_array();
 			$level = $result['level'];
 		}else{
@@ -24,6 +22,16 @@ class Level extends CI_Controller {
 		}
 
 		$mint = parseInt($method);
+
+		$answers = array(
+			1 => 'ans1',
+			2 => 'ans2',
+			3 => 'ans3',
+			4 => 'ans4',
+			5 => 'ans5',
+			6 => 'ans6',
+			7 => 'ans7'
+		);
 	    
 	    if ($method == parseInt($mint)){
 	    	if($mint>$level){
@@ -36,8 +44,10 @@ class Level extends CI_Controller {
 	    		$this->index($mint);
 	    		if($mint<1)echo 'yes';else echo 'lol';
 	    	}
-	    }else if($method == 'asd'){
-	    	header('Location: /level/2');
+	    }else if($key = array_search($method, $answers)){
+	    	if($key==$level)
+				$this->db->query('UPDATE users SET level=? WHERE id=?',array($key+1,$this->session->userdata['id']));
+	    	header('Location: /level/'.($key+1));
 	    	die();
 	    }else if($method != parseInt($method)){
     		header('Location: /level/'.parseInt($method));

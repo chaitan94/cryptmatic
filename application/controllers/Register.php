@@ -3,7 +3,10 @@
 class Register extends CI_Controller {
 	public function index()
 	{
-		$this->load->view('register');
+		if($this->session->userdata['id'])
+			header('Location: /');
+		else
+			$this->load->view('register');
 	}
 	public function newAcc()
 	{

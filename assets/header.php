@@ -10,7 +10,8 @@
 		if($this->session->userdata('email')){
 			//logged in
 			$name = $this->session->userdata('name');
-			$level = $this->session->userdata('level');
+			$lq = $this->db->query('SELECT level from users WHERE id=?',array($this->session->userdata('id')));
+			$level = $lq->row()->level;
 
 			echo '<ul>';
 			echo '<a href="/level/'.$level.'"><li>Level: '.$level.'</li></a>';
