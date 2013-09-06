@@ -3,7 +3,7 @@
 class Register extends CI_Controller {
 	public function index()
 	{
-		if($this->session->userdata['id'])
+		if(isset($this->session->userdata['id']))
 			header('Location: /');
 		else
 			$this->load->view('register');
