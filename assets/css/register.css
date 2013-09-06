@@ -1,0 +1,15 @@
+.card{
+	float: left;
+	background: #FFF;
+	padding: 30px;
+	margin: 50px;
+	border-radius: 2px;
+	box-shadow: rgba(0,0,0,0.4) 0 0 5px 1px;
+}
+.card td{
+	padding: 5px;
+}
+.sign{
+	width: 80%;
+	margin: 0 auto;
+}

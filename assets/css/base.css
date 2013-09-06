@@ -1,0 +1,85 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	background: #EEE;
+}
+*{
+	font-family: Helvetica;
+}
+a{
+	color: #FFF;
+	text-decoration: none;
+}
+.cont{
+	margin-top: 50px;
+}
+
+/* Common */
+
+input[type=text],input[type=email],input[type=password]{
+	padding: 10px;
+	border: 1px rgba(102, 153, 204,0.3) solid;
+	border-radius: 3px;
+  -webkit-transition: all 0.3s ease-out; 
+     -moz-transition: all 0.3s ease-out; 
+       -o-transition: all 0.3s ease-out; 
+          transition: all 0.3s ease-out; 
+}
+
+input[type=text]:hover,input[type=email]:hover,input[type=password]:hover{
+	border: 1px rgba(0, 51, 102,0.8) solid;
+}
+
+input[type=button],input[type=submit]{
+	padding: 10px 30px;
+	background: rgba(122, 173, 234,1);
+	border: 1px rgba(102, 153, 204,0.3) solid;
+	border-radius: 3px;
+  -webkit-transition: all 0.3s ease-out; 
+     -moz-transition: all 0.3s ease-out; 
+       -o-transition: all 0.3s ease-out; 
+          transition: all 0.3s ease-out; 
+}
+
+input[type=button]:hover,input[type=submit]:hover{
+	background: rgba(202, 223, 255,1);
+	border: 1px rgba(0, 51, 102,0.8) solid;
+}
+
+/* Header */
+#fixed-header{
+	position: fixed;
+	top:0;
+	width: 100%;
+	background: #000044;
+	color: #FFF;
+	padding: 10px 0;
+	height: 18px;
+	border-bottom: #09C 4px inset;
+	z-index: 10;
+}
+#fixed-header ul{
+	float: left;
+	margin: 0 10px;
+	padding: 0;
+	list-style: none;
+}
+#fixed-header ul li{
+	margin: 0;
+	padding: 10px;
+	padding-bottom: 6px;
+	border-bottom: #09C 5px inset;
+	display: inline;
+  -webkit-transition: all 0.3s ease-out; 
+     -moz-transition: all 0.3s ease-out; 
+       -o-transition: all 0.3s ease-out; 
+          transition: all 0.3s ease-out; 
+}
+#fixed-header ul li:hover{
+	padding-top: 0;
+	padding-bottom: 0;
+	border-bottom: #09C 13px inset;
+}
+#fixed-header div#account{
+	float: right;
+}
