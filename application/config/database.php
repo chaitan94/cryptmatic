@@ -64,6 +64,21 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
+$db['freeHost']['hostname'] = 'mysql7.000webhost.com';
+$db['freeHost']['username'] = 'a3603619_db';
+$db['freeHost']['password'] = 'crypt13';
+$db['freeHost']['database'] = 'a3603619_db';
+$db['freeHost']['dbdriver'] = 'mysqli';
+$db['freeHost']['dbprefix'] = '';
+$db['freeHost']['pconnect'] = TRUE;
+$db['freeHost']['db_debug'] = TRUE;
+$db['freeHost']['cache_on'] = FALSE;
+$db['freeHost']['cachedir'] = '';
+$db['freeHost']['char_set'] = 'utf8';
+$db['freeHost']['dbcollat'] = 'utf8_general_ci';
+$db['freeHost']['swap_pre'] = '';
+$db['freeHost']['autoinit'] = TRUE;
+$db['freeHost']['stricton'] = FALSE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */

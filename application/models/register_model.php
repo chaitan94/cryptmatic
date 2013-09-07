@@ -16,7 +16,9 @@ class Register_model extends CI_Model{
                 $pquery = $this->db->query("SELECT id FROM users WHERE email=?",array($email));
                 if(!$pquery->num_rows){
                     if($pass==$pass2){
-                        $query = $this->db->query("INSERT INTO users(name, pass, email, level) VALUES (?, ?, ?, 1)",array($name, $pass, $email));
+                        $ttt = $this->db->query("SELECT rank FROM users ORDER BY rank DESC LIMIT 1");
+                        $ttt = $ttt->row_array()['rank']+1;
+                        $query = $this->db->query("INSERT INTO users(name, pass, email, level, rank) VALUES (?, ?, ?, 1, ?)",array($name, $pass, $email, $ttt));
                         $data = array(
                                 'id' => $this->db->insert_id(),
                                 'name' => $name,
@@ -25,7 +27,7 @@ class Register_model extends CI_Model{
                                 'validated' => true
                                 );
                         $this->session->set_userdata($data);
-                        echo "Registration Successful.";
+                        echo "Registration Successful.<br>Redirecting in 3 seconds.<script>window.setTimeout(function(){window.open('/','_self')},3000);</script>";
                     }else{
                         echo "Passwords don't match!";
                     }

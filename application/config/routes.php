@@ -2,12 +2,13 @@
 
 $route['default_controller'] = 'Home';
 
-$route['rules'] = 'Rules';
-$route['level'] = 'Level';
 $route['aboutus'] = 'Aboutus';
-$route['register'] = 'Register';
-$route['profile'] = 'Home';
+$route['leaderboard'] = 'Leaderboard';
+$route['level'] = 'Level';
 $route['login'] = 'Login';
 $route['logout'] = 'Logout';
+$route['profile'] = 'Home';
+$route['register'] = 'Register';
+$route['rules'] = 'Rules';
 
 $route['404_override'] = '';

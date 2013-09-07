@@ -53,11 +53,11 @@ input[type=button]:hover,input[type=submit]:hover{
 	position: fixed;
 	top:0;
 	width: 100%;
-	background: #000044;
+	background: rgba(47,47,47,0.9);
 	color: #FFF;
 	padding: 10px 0;
 	height: 18px;
-	border-bottom: #09C 4px inset;
+	border-bottom: rgba(128,207,55,1) 4px inset;
 	z-index: 10;
 }
 #fixed-header ul{
@@ -70,7 +70,7 @@ input[type=button]:hover,input[type=submit]:hover{
 	margin: 0;
 	padding: 10px;
 	padding-bottom: 6px;
-	border-bottom: #09C 5px inset;
+	border-bottom: rgba(128,207,55,1) 5px inset;
 	display: inline;
   -webkit-transition: all 0.3s ease-out; 
      -moz-transition: all 0.3s ease-out; 
@@ -80,7 +80,7 @@ input[type=button]:hover,input[type=submit]:hover{
 #fixed-header ul li:hover{
 	padding-top: 0;
 	padding-bottom: 0;
-	border-bottom: #09C 13px inset;
+	border-bottom: rgba(128,207,55,1) 13px inset;
 }
 #fixed-header div#account{
 	float: right;

@@ -12,10 +12,9 @@ class Level extends CI_Controller {
 		}
 
 		$level=0;
+		$this->load->model('Current_user_model');
 		if($this->session->userdata['id']){
-			$tq = $this->db->query('SELECT level FROM users WHERE id=? LIMIT 1',array($this->session->userdata['id']));
-			$result = $tq->row_array();
-			$level = $result['level'];
+			$level = $this->Current_user_model->get_level();
 		}else{
     		header('Location: /');
     		die();
@@ -46,7 +45,7 @@ class Level extends CI_Controller {
 	    	}
 	    }else if($key = array_search($method, $answers)){
 	    	if($key==$level)
-				$this->db->query('UPDATE users SET level=? WHERE id=?',array($key+1,$this->session->userdata['id']));
+	    		$this->Current_user_model->next_level($key+1);
 	    	header('Location: /level/'.($key+1));
 	    	die();
 	    }else if($method != parseInt($method)){

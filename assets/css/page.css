@@ -3,6 +3,7 @@
 	padding: 30px;
     width:70%;
 	margin: 80px auto;
+	border-left: rgba(128,207,55,1) 4px inset;
 	border-radius: 2px;
 	box-shadow: rgba(0,0,0,0.4) 0 0 5px 1px;
 }
