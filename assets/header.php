@@ -20,7 +20,10 @@
 			echo '<a href="/logout"><li>Logout</li></a> </ul>';
 		} else {
 			//not logged in
-			echo '<ul><a href="/register"><li>Login/Register</li></a></ul>';
+			echo '<ul>';
+			echo '<a href="/leaderboard"><li>Leaderboard</li></a> ';
+			echo '<a href="/register"><li>Login/Register</li></a>';
+			echo '</ul>';
 		}
 		?>
 	</div>

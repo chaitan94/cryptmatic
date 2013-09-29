@@ -1,14 +1,14 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-$route['default_controller'] = 'Home';
+$route['default_controller'] = 'home';
 
-$route['aboutus'] = 'Aboutus';
-$route['leaderboard'] = 'Leaderboard';
-$route['level'] = 'Level';
-$route['login'] = 'Login';
-$route['logout'] = 'Logout';
-$route['profile'] = 'Home';
-$route['register'] = 'Register';
-$route['rules'] = 'Rules';
+$route['aboutus'] = 'aboutus';
+$route['leaderboard'] = 'leaderboard';
+$route['level'] = 'level';
+$route['login'] = 'login';
+$route['logout'] = 'logout';
+$route['profile'] = 'home';
+$route['register'] = 'register';
+$route['rules'] = 'rules';
 
 $route['404_override'] = '';
