@@ -17,7 +17,9 @@ class Register_model extends CI_Model{
                 if(!$pquery->num_rows){
                     if($pass==$pass2){
                         $ttt = $this->db->query("SELECT rank FROM users ORDER BY rank DESC LIMIT 1");
-                        $ttt = $ttt->row_array()['rank']+1;
+                        $ttt = $ttt->row_array();
+                        $ttt = $ttt['rank'];
+                        $ttt = $ttt+1;
                         $query = $this->db->query("INSERT INTO users(name, pass, email, level, rank) VALUES (?, ?, ?, 1, ?)",array($name, $pass, $email, $ttt));
                         $data = array(
                                 'id' => $this->db->insert_id(),

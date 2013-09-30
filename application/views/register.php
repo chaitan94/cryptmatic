@@ -6,16 +6,7 @@
 	<link rel="stylesheet" href="assets/css/register.css">
 </head>
 <body>
-<?php
-if (session_status() == PHP_SESSION_NONE) {
-  session_start();
-}
-if(isset($_SESSION['id'])){
-?>
-<script type="text/javascript">window.open('/','_self');</script>
-<?php
-}else{
-include 'assets/header.php'; ?>
+<?php include 'assets/header.php'; ?>
 <div class="cont">
 <div class="sign">
 <table id="register" class="card">
@@ -67,8 +58,5 @@ include 'assets/header.php'; ?>
 </form>
 </div>
 </div>
-<?php 
-}
-?>
 </body>
 </html>

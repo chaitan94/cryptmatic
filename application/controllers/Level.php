@@ -32,16 +32,15 @@ class Level extends CI_Controller {
 			7 => 'ans7'
 		);
 	    
-	    if ($method == parseInt($mint)){
-	    	if($mint>$level){
+	    if ($method == $mint){ // integer given as method
+	    	if($mint>$level){  // greater than current level
 	    		header('Location: /level/'.$level);
 	    		die();
-	    	}else if($mint<1){
+	    	}else if($mint<1){ // less than lowest level
 	    		header('Location: /level/1');
 	    		die();
-	    	}else{
+	    	}else{ // on current level
 	    		$this->index($mint);
-	    		if($mint<1)echo 'yes';else echo 'lol';
 	    	}
 	    }else if($key = array_search($method, $answers)){
 	    	if($key==$level)

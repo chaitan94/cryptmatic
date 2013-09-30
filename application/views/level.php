@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Cryptmatic</title>
-	<link rel="stylesheet" href="assets/css/base.css">
-	<link rel="stylesheet" href="assets/css/page.css">
+	<link rel="stylesheet" href="/assets/css/base.css">
+	<link rel="stylesheet" href="/assets/css/page.css">
 </head>
 <body>
 <?php include 'assets/header.php'; ?>
